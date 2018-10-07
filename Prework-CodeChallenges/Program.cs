@@ -6,12 +6,13 @@ namespace Prework_CodeChallenges
     {
         static void Main(string[] args)
         {
-            Problem1();
+            //Problem1();
             //Problem2();
-            //Problem3();
+            Problem3();
             //Problem4();
         }
 
+        /*
         static void Problem1() 
         {
             //request user to input 5 numbers between 1-10
@@ -44,7 +45,7 @@ namespace Prework_CodeChallenges
             }
             Console.WriteLine(selectedNum * occurence);
         }
-
+        */
 
         /*static void Problem2()
         {
@@ -55,25 +56,33 @@ namespace Prework_CodeChallenges
         }
         */
 
-        /*static void Problem3()
-        { 
+        static void Problem3()
+        {
             //Initialize sequence
-            int[] sequence = { 1, 3, 2 };
+            int[] sequenceArr = { 1, 3, 2 };
+            int sequenceSum = 0;
+            int sequenceProduct = 1;
 
             //Return 'Yes' if array is perfect sequence; 
             //Return 'No if array is not a perfect sequence
-            for (int i = 0; i < sequence.Length; i++)
+            for (int i = 0; i < sequenceArr.Length; i++)
             {
+                sequenceSum += sequenceArr[i];
+                sequenceProduct *= sequenceArr[i];
 
+                if (sequenceSum == sequenceProduct)
+                {
+                    Console.WriteLine("Yes, this is a perfect sequence!");
+                }
+                else
+                {
+                    Console.WriteLine("No, this is not a perfect sequence!");
+                }
             }
-
-  
         }
-        */
-          
-        //{
-        //    //PROBLEM 4
         
+        //static void Problem4()  
+        //{
         //    //Get a matrix of integers
 
         //    //Use for loops to loop through an array to get the sum of the array
